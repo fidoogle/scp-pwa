@@ -2,6 +2,7 @@ import React from 'react';
 import UseStyles from '../components/styles';
 import { Box, Chip, Grid, Paper, Typography } from '@material-ui/core';
 import Nav from '../components/nav'
+import BarChart from '../components/bar-chart'
 
 export default function NavPrimary() { 
     const classes = UseStyles();
@@ -17,7 +18,7 @@ export default function NavPrimary() {
                     alignItems="flex-start"
                     spacing={2}
                 >
-                    <Grid item xs={12} sm={4}
+                    <Grid item xs={12} sm={5}
                         container
                         direction="column"
                         justify="space-around"
@@ -29,8 +30,11 @@ export default function NavPrimary() {
                             <img src="/bill-left.PNG"/>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={8}>
+                    <Grid item xs={12} sm={7}>
                         <div className={classes.title}>Monthly Usage</div>
+                        <div>
+                            <BarChart/>
+                        </div>
                     </Grid>
                 </Grid>
             </div>
