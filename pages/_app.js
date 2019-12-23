@@ -5,15 +5,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default class BlogApp extends App {
-    static async getInitialProps({ Component, ctx }) {
-        let pageProps = {};
-
-        if (Component.getInitialProps) {
-            pageProps = await Component.getInitialProps(ctx);
-        }
-
-        return { pageProps };
-    }
 
     renderHead() {
         return (
